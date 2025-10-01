@@ -53,6 +53,40 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen
       style="position: absolute; top:0; left:0; width:100%; height:100%;">
+      
+  <!-- YouTube player will load here -->
+  <div id="player"></div>
+
+  <!-- Load the YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    var player;
+
+    // API will call this when it’s ready
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'lHKEEOtznqY', // your video ID
+        playerVars: {
+          autoplay: 1,
+          mute: 1 // start muted
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    // When the player is ready
+    function onPlayerReady(event) {
+      // Stay muted for 5 seconds, then unmute
+      setTimeout(() => {
+        player.unMute();
+      }, 5000); // 5000 ms = 5 sec
+    }
+  </script>
+</body>
+</html>
     </iframe>
   </div>
 </section>
@@ -70,6 +104,7 @@
   </section>
 </body>
 </html>
+
 
 
 
