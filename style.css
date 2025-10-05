@@ -61,9 +61,10 @@ a:hover {
 
 .result-pic {
   display: block;
-  max-width: 100%;   /* makes it scale for smaller screens */
-  height: auto;      /* keeps proportions */
-  margin: 20px auto; /* centers the image */
+  width: 60%;       /* controls visible size, adjust between 30–100% */
+  max-width: 400px; /* sets an upper limit */
+  height: auto;     /* keeps proportions */
+  margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
