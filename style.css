@@ -61,7 +61,7 @@ a:hover {
 
 .result-pic {
   display: block;
-  width: 60%;       /* controls visible size, adjust between 30–100% */
+  width: 30%;       /* controls visible size, adjust between 30–100% */
   max-width: 400px; /* sets an upper limit */
   height: auto;     /* keeps proportions */
   margin: 20px auto;
